@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Misión 34</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #5DADE2; /* Azul Gnius */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .banner {
+            background-color: #85C1E9; /* Azul más claro */
+            color: #333;
+            padding: 15px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .banner:hover {
+            background-color: #AED6F1;
+        }
+        .banner .title {
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 8px;
+            border-top: 1px solid #fff;
+            padding-top: 8px;
+            color: #1A5276; /* Azul oscuro texto */
+        }
+        .content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background-color: #EAF2F8; /* Azul muy claro fondo */
+            border-radius: 5px;
+        }
+        .dialogue {
+            background-color: #FEF9E7; /* Amarillo pálido para diálogo */
+            border: 1px solid #FAD7A0;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 15px 0;
+            text-align: left; /* Cambiado a izquierda para mejor lectura */
+            font-style: italic;
+            color: #784212; /* Marrón oscuro texto */
+            position: relative; /* Para el bocadillo */
+            border-left: 5px solid #F39C12; /* Naranja */
+        }
+
+        .dropdown {
+            margin-bottom: 25px;
+            text-align: center; /* Centrar dropdown */
+        }
+        .dropdown label {
+            font-weight: bold;
+            color: #1A5276;
+        }
+        .dropdown select {
+            font-size: 1.1em;
+            padding: 8px 12px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: 1px solid #85C1E9;
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px;}
+        td { padding: 12px; border: 1px solid #AED6F1; vertical-align: top; }
+        td strong { color: #1A5276; }
+        .level-title { /* Clase específica para el título del nivel */
+             text-align: center;
+             color: #5DADE2;
+             font-size: 1.4em;
+             margin-bottom: 20px;
+        }
+        /* Clases para ocultar/mostrar contenido por nivel */
+        .k1-content, .k2-content, .k3-content { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Playbook - Misión 34: ¡Cuidado con la Roca Resbaladiza!</h1>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1 (3 años)</option>
+                <option value="K2">K2 (4 años)</option>
+                <option value="K3">K3 (5 años)</option>
+            </select>
+        </div>
+
+        <h2 id="selected-level" class="level-title">Nivel: K1 (3 años)</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0: Revisión de Materiales -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales</div>
+        <div class="subtitle">Objetivo: Asegurarse de que todos los materiales necesarios para la clase estén disponibles y preparados antes de que lleguen los niños.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Revisa que tengas listos los materiales indicados en la **DIAPOSITIVA 1**: 1 Kinderbot y 10 iBricks por cada pareja. Kinderbots cargados.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1: Bienvenida e Introducción -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: ¡Aventura en la Cueva! ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Objetivo: Introducir el nuevo escenario (cueva) y el concepto de encontrar obstáculos en el camino.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 2** “Bienvenida”. Saluda como exploradores y habla sobre cuevas misteriosas.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡Hola, valientes exploradores del CODE SQUAD! ¡Pónganse sus cascos imaginarios porque hoy nos adentramos en una aventura subterránea! ¡Vamos a explorar la Cueva del Eco Brillante! Dicen que al final hay un cristal que ¡resplandece en la oscuridad! ¿Se atreven a entrar?"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 3** "Gimnasio CODE SQUAD". Explica que necesitan agilidad mental para esquivar sorpresas en la cueva.</td>
+                <td>
+                     <div class="dialogue">
+                        "Pero explorar cuevas requiere estar ¡muy atentos y listos para cualquier sorpresa! A veces el camino es estrecho, a veces hay que rodear cosas... ¡Nuestro cerebro necesita ser ágil! ¡Vamos al Gimnasio Cerebral para entrenar nuestros reflejos mentales y estar listos para esquivar cualquier obstáculo!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2: Baile de Algoritmos -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-algoritmos')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Objetivo: Practicar secuencias de movimiento que incluyan giros y cambios de dirección, simulando esquivar.</div>
+    </div>
+    <div id="baile-algoritmos" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 4** “Baile de Algoritmos”. Guía el baile, animando a imaginar que esquivan obstáculos invisibles al girar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Exploradores, a moverse! En este baile, ¡vamos a practicar cómo esquivar! Cuando la música diga 'Adelante', avanzamos por la cueva. Cuando diga 'Gira', ¡imaginen que hay una roca y la rodeamos con el giro! ¡Adelante, gira, adelante, gira! ¡Sigan la música y esquiven con estilo!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3: Planteamiento del Problema - La Roca Resbaladiza -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">⚠️ Actividad 3: ¡Oh, no! ¡Una Roca en el Camino! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Presentar la historia del obstáculo, construir el escenario con iBricks y definir el reto de programar una ruta alternativa.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 5**. Narra la exploración de la cueva y el descubrimiento del obstáculo.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Estamos dentro de la Cueva del Eco Brillante, exploradores! ¡Miren qué oscura y misteriosa! Nuestro valiente Kinderbot va adelante con su linterna imaginaria, buscando el cristal brillante. Avanza con cuidado por el camino... pero de repente... ¡CRASH! ¡Una roca grande y resbaladiza ha caído del techo y está justo en medio del camino! ¡Oh, no! ¡Kinderbot no puede pasar!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 6**. Explica el reto: usar iBricks para marcar el camino, poner un iBrick como la roca obstáculo, y programar a Kinderbot para rodearla y llegar al cristal (otro iBrick al final).</td>
+                <td>
+                     <div class="dialogue">
+                        "¡No podemos rendirnos, CODE SQUAD! ¡Tenemos que encontrar otra ruta! Miren: vamos a construir el camino de la cueva con nuestros bloques gigantes (iBricks). Pondremos uno al inicio, otros marcando el sendero... ¡y uno GRANDE justo en medio, esa será la Roca Resbaladiza! Al final del camino, pondremos otro bloque que será ¡el Cristal Brillante! Nuestra misión es programar a Kinderbot para que avance, vea la roca, ¡y la rodee con cuidado para seguir su camino y llegar hasta el cristal! ¿Podemos programar un desvío?"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4: Formación de Parejas -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: ¡Equipos de Rescate Espeleólogo! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Formar parejas para analizar el problema espacial, construir el escenario y planificar la secuencia de rodeo.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 7** “Formación de Equipos”. Explica que planear rutas alternativas requiere un buen equipo de espeleólogos (exploradores de cuevas). Forma las parejas.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Pequeños espeleólogos! ¡Encontrar una nueva ruta en una cueva oscura es un trabajo para los mejores equipos! ¡Juntos pueden ver por dónde es mejor pasar alrededor de la roca y planear los pasos exactos para Kinderbot! ¡Formen sus Equipos de Rescate Espeleólogo! ¡Encuentren a su compañero explorador!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Verifica que todos tengan pareja. Anímales a construir el camino con el obstáculo y a discutir juntos la ruta de Kinderbot.</td>
+                <td>
+                     <div class="dialogue">
+                        "¿Equipos listos? ¡Perfecto! Ahora, construyan su camino de la cueva. Pongan el inicio, el final (el cristal), y ¡la Roca Resbaladiza en medio! Miren bien... ¿Por dónde puede pasar Kinderbot? ¿Por la derecha? ¿Por la izquierda? ¿Cuántos giros necesita? ¡Hablen y decidan juntos el plan para rodear la roca!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5: Reto de Codificación - ¡Programando el Desvío! -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('reto-codificacion')">
+        <div class="title">⌨️ Actividad 5: ¡Código para Esquivar la Roca! ⏰ Tiempo: 6 minutos</div>
+        <div class="subtitle">Objetivo: Construir el escenario y programar la secuencia de pasos (Adelante, Girar Izquierda/Derecha) para rodear el obstáculo según el nivel.</div>
+    </div>
+    <div id="reto-codificacion" class="content">
+        <table>
+            <!-- Paso Común: Construir Escenario y Repasar Botones -->
+             <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la **DIAPOSITIVA 8** "¡A Construir y Recordar!". Guía la construcción del camino con iBricks y el obstáculo en medio. Repasa botones Adelante, Giro Izquierda, Giro Derecha.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Espeleólogos, coloquen sus bloques! Inicio... camino... ¡la Roca en medio!... camino... ¡el Cristal al final! ¡Muy bien! Recordemos los botones: Adelante para avanzar, Giro Izquierda y Giro Derecha para ¡cambiar de dirección y esquivar! ¡Listos para el código del desvío!"
+                    </div>
+                </td>
+            </tr>
+            <!-- Contenido Específico por Nivel -->
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 2 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 9** "Misión K1: Simple Detour". Guía para programar 3-4 pasos para un rodeo simple (ej. A, GD, A, GI).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¡Vamos a rodear la roca! Plan simple: Avanza UN paso hasta cerca de la roca ('Adelante'). Gira a la DERECHA para pasarla ('Girar Derecha'). Avanza UN paso al lado de la roca ('Adelante'). Gira a la IZQUIERDA para volver al camino ('Girar Izquierda'). ¡Son 4 pasos! (Demuestra A, GD, A, GI). ¡Preparen el código! ¡Sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                <td><strong>PASO 2 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 10** "Misión K2: Precise Path". Guía para programar 5-6 pasos, necesitando más precisión al pasar (ej. A, GD, A, A, GI, A).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Exploradores K2! ¡Necesitamos más cuidado al pasar! Plan: Avanza UN paso ('Adelante'). Gira a la DERECHA ('Girar Derecha'). Avanza DOS pasos para pasar bien la roca ('Adelante', 'Adelante'). Gira a la IZQUIERDA ('Girar Izquierda'). Avanza UN paso más hacia el cristal ('Adelante'). ¡Son 6 pasos! (Demuestra A, GD, A, A, GI, A). ¡Preparen su código preciso! ¡Sin activar 'Go'!"
+                    </div>
+                </td>
+            </tr>
+            <!-- K3 -->
+             <tr class="k3-content">
+                <td><strong>PASO 2 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 11** "Misión K3: Tricky Maneuver". Guía para programar 6-7 pasos, posiblemente necesitando ajustar pasos adelante/atrás para no chocar (ej. A, A, GD, A, GI, A, A). Introducir idea de prueba y error.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Maestros Espeleólogos K3! ¡Este desvío es complicado! Quizás necesiten avanzar MÁS antes de girar, o MENOS. Plan posible: Avanza DOS pasos ('Adelante', 'Adelante'). Gira DERECHA ('Girar Derecha'). Avanza UN paso ('Adelante'). Gira IZQUIERDA ('Girar Izquierda'). Avanza DOS pasos más ('Adelante', 'Adelante'). ¡Son 7 pasos! (Demuestra A, A, GD, A, GI, A, A). ¡Preparen su código! ¡Pero OJO! Puede que al probarlo, Kinderbot choque un poquito. Si pasa, ¡no importa! Usan 'Clear', piensan qué falló (¿muchos pasos adelante? ¿pocos?) ¡y ajustan el código! ¡Eso es ser un gran programador! ¡Listos, sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6: ¡Esquivando la Roca! -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('probando-desvio')">
+        <div class="title">🚀 Actividad 6: ¡Maniobra de Evasión! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Ejecutar el código, observar si Kinderbot rodea el obstáculo y llega al final. Fomentar la depuración simple si es necesario.</div>
+    </div>
+    <div id="probando-desvio" class="content">
+        <table>
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 1 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 12** "¡Éxito K1!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar si completa el rodeo simple. Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¡Kinderbot listo en la entrada de la cueva! ¿Preparados con su código de 4 pasos para el desvío? ¡Presionen 'Go'! ¡Miren! Avanza... gira... avanza... ¡gira! ¿Pasó la roca? ¿Está en camino al cristal? ¡SIIII! ¡Qué buenos guías son! ¡Roca esquivada!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                 <td><strong>PASO 1 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 13** "¡Éxito K2!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar si completa el rodeo de 6 pasos y llega al cristal. Celebrar la precisión.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Exploradores K2! ¡Kinderbot al inicio! ¿Listos con su código preciso de 6 pasos? ¡Presionen 'Go'! ¡Veamos la maniobra! Avanza... Gira D... Avanza, Avanza... Gira I... Avanza... ¿Llegó al Cristal Brillante sin tocar la roca? ¡PERFECTO! ¡Una evasión limpia! ¡Bravo!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K3 -->
+             <tr class="k3-content">
+                 <td><strong>PASO 1 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 14** "¡Éxito K3!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar atentamente. Si choca o no llega, guiar para identificar el error y ajustar el código ('Clear' y reprogramar). Celebrar el proceso de resolución.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Maestros K3! ¡Momento de la maniobra complicada! ¡Kinderbot al inicio! ¿Listos con su código de 6 o 7 pasos? ¡Presionen 'Go'! ¡Observen muy bien! ¿Rodea la roca? ¿Llega al cristal? ¡Si choca un poquito o se desvía, ¡EXCELENTE! ¡Es una oportunidad para investigar! ¿Qué pasó? ¿Necesita más o menos pasos 'Adelante' en alguna parte? ¡Usen 'Clear', cambien UN solo paso y prueben de nuevo! ¡Resolverlo es el verdadero tesoro! ¡Cuando lo logren, celebren su inteligencia!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7: Mensaje del Cuartel (Omitida para Misión 34) -->
+
+<!-- Actividad 8: Conclusión y Reflexión -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion-reflexion')">
+        <div class="title">🏁 Actividad 8: ¡Cristal Conseguido y Reflexión! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Celebrar el éxito en superar el obstáculo, reforzar la habilidad de planificar rutas alternativas y la resolución de problemas.</div>
+    </div>
+    <div id="conclusion-reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 15** "¡Misión Cumplida!". Cierra la historia (Kinderbot con el cristal). Realiza preguntas de reflexión.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡LO CONSEGUIMOS, CODE SQUAD! ¡A pesar de la Roca Resbaladiza, su inteligencia y trabajo en equipo guiaron a Kinderbot hasta el final! ¡Miren, ha encontrado el Cristal Brillante! ¡La Cueva del Eco ya no tiene secretos para ustedes! Pensemos en esta gran exploración:
+1. ¿Qué problema encontramos en la cueva hoy? (¡Una roca bloqueando el camino!)
+2. ¿Qué tuvimos que hacer para que Kinderbot pudiera pasar? (¡Programar un desvío/rodeo!)
+3. ¿Usamos los mismos botones de siempre (Adelante, Girar) pero en un orden diferente para esquivar?
+¡Han demostrado que no hay obstáculo que pueda detener al CODE SQUAD! ¡Aprendieron a resolver problemas y a encontrar nuevas rutas! ¡Son exploradores y programadores de primera! ¡Felicidades!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+        <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        var parentActivity = content.closest('.activity');
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            parentActivity.classList.remove('active');
+        } else {
+            content.style.display = "block";
+            parentActivity.classList.add('active');
+        }
+    }
+
+    function updateContent() {
+        var level = document.getElementById("class-level").value;
+        var levelText = document.getElementById("class-level").options[document.getElementById("class-level").selectedIndex].text;
+        document.getElementById("selected-level").innerText = "Nivel: " + levelText;
+
+        var k1Contents = document.querySelectorAll('.k1-content');
+        var k2Contents = document.querySelectorAll('.k2-content');
+        var k3Contents = document.querySelectorAll('.k3-content');
+
+        k1Contents.forEach(function(el) { el.style.display = 'none'; });
+        k2Contents.forEach(function(el) { el.style.display = 'none'; });
+        k3Contents.forEach(function(el) { el.style.display = 'none'; });
+
+        var selectedContents = document.querySelectorAll('.' + level.toLowerCase() + '-content');
+        selectedContents.forEach(function(el) {
+             el.style.display = 'table-row';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        updateContent();
+    });
+</script>
+
+</body>
+</html>
